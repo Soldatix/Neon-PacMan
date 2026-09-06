@@ -1,0 +1,77 @@
+name: One-time SEO metadata update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/seo-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update Neon Pac-Man metadata
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          path = Path("index.html")
+          text = path.read_bytes().decode("utf-8")
+          url = "https://neonpacman.appsandgames.org/"
+
+          text = re.sub(r'<title>.*?</title>', '<title>Neon Pac-Man — Free Online Maze Arcade Game | Apps & Games</title>', text, count=1, flags=re.S)
+          text = re.sub(r'<meta\s+name="description"[^>]*>', '<meta name="description" content="Play Neon Pac-Man, a free modern maze-chase browser game with power pellets, ghosts, saved progress, local leaderboard and five interface languages.">', text, count=1, flags=re.S)
+
+          if f'rel="canonical" href="{url}"' not in text:
+              seo = '''<meta name="robots" content="index, follow">
+          <link rel="canonical" href="https://neonpacman.appsandgames.org/">
+          <meta property="og:type" content="website">
+          <meta property="og:title" content="Neon Pac-Man — Free Online Maze Arcade Game">
+          <meta property="og:description" content="Guide Neon Pac-Man through a glowing maze, collect dots and power pellets, avoid ghosts and chase the local leaderboard.">
+          <meta property="og:url" content="https://neonpacman.appsandgames.org/">
+          <meta property="og:site_name" content="Apps & Games">
+          <meta property="og:image" content="https://appsandgames.org/assets/logo/apps-and-games-logo.png">
+          <meta property="og:image:alt" content="Neon Pac-Man on Apps & Games">
+          <meta name="twitter:card" content="summary_large_image">
+          <meta name="twitter:title" content="Neon Pac-Man | Apps & Games">
+          <meta name="twitter:description" content="A free modern neon maze-chase game with power pellets, ghosts, saved progress and local leaderboard.">
+          <meta name="twitter:image" content="https://appsandgames.org/assets/logo/apps-and-games-logo.png">
+          <script type="application/ld+json">
+          {
+            "@context":"https://schema.org",
+            "@type":["VideoGame","SoftwareApplication"],
+            "name":"Neon Pac-Man",
+            "url":"https://neonpacman.appsandgames.org/",
+            "description":"A free modern neon maze-chase browser game with power pellets, ghosts, saved progress and a local leaderboard.",
+            "applicationCategory":"GameApplication",
+            "gamePlatform":["Web browser","Desktop","Mobile"],
+            "operatingSystem":"Any",
+            "isAccessibleForFree":true,
+            "inLanguage":["en","hr","de","it","es"],
+            "publisher":{"@type":"Organization","name":"Apps & Games","url":"https://appsandgames.org/"},
+            "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+          }
+          </script>
+          '''
+              marker = '<style>'
+              if marker not in text:
+                  raise SystemExit("Style marker not found; no SEO block inserted.")
+              text = text.replace(marker, seo + marker, 1)
+
+          path.write_bytes(text.encode("utf-8"))
+          workflow = Path(".github/workflows/seo-once.yml")
+          if workflow.exists():
+              workflow.unlink()
+      - name: Commit SEO update and remove helper workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "SEO: add Neon Pac-Man metadata"
+          git push
