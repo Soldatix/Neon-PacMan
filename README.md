@@ -1,6 +1,6 @@
 # Neon Pac-Man
 
-A modern browser maze-chase game. Open `dist/index.html` in a current browser. Progress, settings, and the leaderboard are stored locally on the current device.
+A modern browser maze-chase game. Open `index.html` in a current browser. Progress, settings, and the leaderboard are stored locally on the current device.
 
 ## Hrvatski
 
