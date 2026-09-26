@@ -2,6 +2,10 @@
 
 A modern browser maze-chase game. Open `index.html` in a current browser. Progress, settings, and the leaderboard are stored locally on the current device.
 
+## Web App / PWA modernization
+
+The v8.1.1 branch adds the local Master Language Menu, Light / Dark / System UI themes, manifest, service worker, local 192×192 and 512×512 icons and the standard top-centered `?install=web` flow. Final install/offline behavior requires HUMAN_GATE before production deployment.
+
 ## Hrvatski
 
 ### Kako igrati
