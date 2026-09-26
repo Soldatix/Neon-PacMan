@@ -209,6 +209,7 @@
     });
 
     button.addEventListener('keydown', event => {
+      event.stopPropagation();
       if (['ArrowDown', 'ArrowUp', 'Enter', ' '].includes(event.key)) {
         event.preventDefault();
         openMenu();
@@ -219,6 +220,7 @@
     });
 
     options.addEventListener('keydown', event => {
+      event.stopPropagation();
       const optionItems = items();
       const current = optionItems.indexOf(document.activeElement);
       if (event.key === 'ArrowDown') {
