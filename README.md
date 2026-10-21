@@ -19,6 +19,14 @@ The v8.1.1 branch adds the local Master Language Menu, Light / Dark / System UI 
 - Pomoću zasebnih gumba u zaglavlju uključite/isključite zvučne efekte i pozadinsku glazbu, otvorite puni zaslon, promijenite jezik ili otvorite informacije.
 - Rang-lista prikazuje deset najboljih rezultata spremljenih na tom uređaju.
 
+
+
+### Zasluge
+
+Ako koristiš naš izvorni kod za vlastitu verziju igre, bili bismo zahvalni da nas spomeneš u odjeljku O aplikaciji / Info:
+
+**Temeljeno na igri Neon Pac-Man autora Apps & Games — [appsandgames.org](https://appsandgames.org/)**
+
 ## English
 
 ### How to play
@@ -31,6 +39,14 @@ The v8.1.1 branch adds the local Master Language Menu, Light / Dark / System UI 
 - **Save & Exit** stores the current run. **Exit without save** leaves without saving the new changes.
 - Use the separate header buttons to toggle sound effects and background music, enter fullscreen, change language, or open information.
 - The leaderboard shows the ten best scores stored on the current device.
+
+
+
+### Credits
+
+If you use our source code to create your own version, we'd appreciate a mention in its About / Info section:
+
+**Based on Neon Pac-Man by Apps & Games — [appsandgames.org](https://appsandgames.org/)**
 
 ## Deutsch
 
@@ -45,6 +61,14 @@ The v8.1.1 branch adds the local Master Language Menu, Light / Dark / System UI 
 - Über separate Schaltflächen oben kannst du Soundeffekte und Hintergrundmusik ein- oder ausschalten sowie Vollbild, Sprache und Informationen steuern.
 - Die Bestenliste zeigt die zehn besten Ergebnisse, die auf diesem Gerät gespeichert sind.
 
+
+
+### Danksagung
+
+Wenn du unseren Quellcode für eine eigene Version verwendest, würden wir uns über einen Hinweis unter Über / Info freuen:
+
+**Basierend auf Neon Pac-Man von Apps & Games — [appsandgames.org](https://appsandgames.org/)**
+
 ## Italiano
 
 ### Come giocare
@@ -58,6 +82,14 @@ The v8.1.1 branch adds the local Master Language Menu, Light / Dark / System UI 
 - I pulsanti separati in alto permettono di attivare o disattivare gli effetti sonori e la musica di sottofondo, oltre a gestire schermo intero, lingua e informazioni.
 - La classifica mostra i dieci punteggi migliori salvati sul dispositivo attuale.
 
+
+
+### Riconoscimenti
+
+Se utilizzi il nostro codice sorgente per creare una tua versione del gioco, apprezzeremmo una menzione nella sezione Informazioni / Info:
+
+**Basato su Neon Pac-Man di Apps & Games — [appsandgames.org](https://appsandgames.org/)**
+
 ## Español
 
 ### Cómo jugar
@@ -70,6 +102,14 @@ The v8.1.1 branch adds the local Master Language Menu, Light / Dark / System UI 
 - **Guardar y salir** almacena la partida actual. **Salir sin guardar** abandona la partida sin guardar los nuevos cambios.
 - Usa los botones superiores separados para activar o desactivar los efectos de sonido y la música de fondo, además de controlar la pantalla completa, el idioma y la información.
 - La clasificación muestra las diez mejores puntuaciones guardadas en el dispositivo actual.
+
+
+
+### Reconocimientos
+
+Si utilizas nuestro código fuente para crear tu propia versión del juego, agradeceríamos una mención en la sección Acerca de / Información:
+
+**Basado en Neon Pac-Man de Apps & Games — [appsandgames.org](https://appsandgames.org/)**
 
 ## Technical notes
 
