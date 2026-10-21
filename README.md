@@ -26,6 +26,7 @@ The v8.1.1 branch adds the local Master Language Menu, Light / Dark / System UI 
 Ako koristiš naš izvorni kod za vlastitu verziju igre, bili bismo zahvalni da nas spomeneš u odjeljku O aplikaciji / Info:
 
 **Temeljeno na igri Neon Pac-Man autora Apps & Games — [appsandgames.org](https://appsandgames.org/)**
+
 ## English
 
 ### How to play
@@ -46,6 +47,7 @@ Ako koristiš naš izvorni kod za vlastitu verziju igre, bili bismo zahvalni da 
 If you use our source code to create your own version, we'd appreciate a mention in its About / Info section:
 
 **Based on Neon Pac-Man by Apps & Games — [appsandgames.org](https://appsandgames.org/)**
+
 ## Deutsch
 
 ### Spielanleitung
@@ -66,6 +68,7 @@ If you use our source code to create your own version, we'd appreciate a mention
 Wenn du unseren Quellcode für eine eigene Version verwendest, würden wir uns über einen Hinweis unter Über / Info freuen:
 
 **Basierend auf Neon Pac-Man von Apps & Games — [appsandgames.org](https://appsandgames.org/)**
+
 ## Italiano
 
 ### Come giocare
@@ -86,6 +89,7 @@ Wenn du unseren Quellcode für eine eigene Version verwendest, würden wir uns �
 Se utilizzi il nostro codice sorgente per creare una tua versione del gioco, apprezzeremmo una menzione nella sezione Informazioni / Info:
 
 **Basato su Neon Pac-Man di Apps & Games — [appsandgames.org](https://appsandgames.org/)**
+
 ## Español
 
 ### Cómo jugar
@@ -106,6 +110,7 @@ Se utilizzi il nostro codice sorgente per creare una tua versione del gioco, app
 Si utilizas nuestro código fuente para crear tu propia versión del juego, agradeceríamos una mención en la sección Acerca de / Información:
 
 **Basado en Neon Pac-Man de Apps & Games — [appsandgames.org](https://appsandgames.org/)**
+
 ## Technical notes
 
 - No external assets or libraries are required.
