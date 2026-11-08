@@ -1,0 +1,9 @@
+# Only the static Neon Pac-Man application belongs in Workers Assets.
+# The site lives at repository root; prevent repository/build/config files
+# from being uploaded as publicly served files.
+.git/
+.github/
+README.md
+wrangler.jsonc
+.assetsignore
+*.md
