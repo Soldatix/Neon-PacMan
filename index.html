@@ -50,12 +50,27 @@
     .modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:18px;background:rgba(1,3,10,.82);backdrop-filter:blur(9px)}.modal.hidden{display:none}.modal-card{width:min(760px,100%);max-height:min(86dvh,820px);overflow:auto;background:linear-gradient(155deg,#111a3b,#080c20);border:1px solid rgba(84,232,255,.28);border-radius:22px;box-shadow:var(--shadow);padding:22px}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:-22px;padding:5px 0 12px;background:#111a3b;z-index:2}.modal h2{margin:0;font-size:1.35rem}.modal p{line-height:1.65;color:#c7d2ee}.support-intro{margin-bottom:16px}.payment-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}.payment-card{display:flex;flex-direction:column;min-width:0;padding:16px;border-radius:16px;background:linear-gradient(155deg,#0e1736,#080d20);border:1px solid rgba(91,128,230,.28)}.payment-brand{display:flex;align-items:center;gap:10px;margin-bottom:8px}.payment-symbol{display:grid;place-items:center;width:40px;height:40px;flex:0 0 40px;border-radius:12px;background:rgba(84,232,255,.09);border:1px solid rgba(84,232,255,.28);color:var(--cyan);font-weight:900}.payment-card h3{margin:0;color:var(--text);font-size:1.05rem}.payment-card p{margin:0;font-size:.9rem;line-height:1.5}.payment-badges{display:flex;flex-wrap:wrap;gap:7px;margin:13px 0}.payment-badge{padding:5px 9px;border-radius:999px;background:#101a3b;border:1px solid rgba(91,128,230,.24);color:#b9c8ee;font-size:.74rem;font-weight:750}.payment-action{display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:auto;padding:9px 12px;border-radius:12px;background:linear-gradient(90deg,var(--cyan),var(--blue));color:#061018!important;text-decoration:none;font-weight:900;text-align:center}.payment-card.stripe .payment-action{background:linear-gradient(90deg,var(--yellow),#ffb84d)}.payment-note{margin:0 0 18px!important;font-size:.8rem;color:var(--muted)!important}.crypto-card{padding:14px;border-radius:15px;background:#080d20;border:1px solid rgba(91,128,230,.22)}.crypto-card h3{margin:0 0 10px;color:var(--cyan);font-size:1rem}.wallet{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.78rem;color:#b9c8ee;overflow-wrap:anywhere;line-height:1.55}.toast{position:fixed;left:50%;bottom:24px;z-index:30;transform:translate(-50%,20px);opacity:0;padding:11px 16px;border-radius:999px;color:#061018;background:var(--green);font-weight:850;pointer-events:none;transition:.22s}.toast.show{opacity:1;transform:translate(-50%,0)}
     @keyframes chomp{from{clip-path:polygon(0 0,100% 0,100% 35%,53% 50%,100% 65%,100% 100%,0 100%)}to{clip-path:polygon(0 0,100% 0,100% 48%,53% 50%,100% 52%,100% 100%,0 100%)}}@keyframes float{50%{transform:translateY(-3px)}}
     @media(max-width:880px){.main{grid-template-columns:1fr}.side{grid-template-columns:1fr 1fr}.game-card{order:-1}.app{padding-top:12px}.hud{grid-template-columns:1fr auto}.level{display:none}.hud-actions{grid-column:1/-1;justify-content:center}.canvas-wrap{padding:9px}.dpad.is-active{display:grid}}
+
+    /* Preplanned bottom ad zone: only visible in menu, never over maze or
+       controls. Keep enough width for 320px ads on narrow phones. */
+    .neon-ad-area[hidden], .neon-ad-unit[hidden] { display: none !important; }
+    .neon-ad-area { position: relative; flex: 0 0 auto; align-self: center;
+      width: 100vw; max-width: 100vw; margin-left: 50%; transform: translateX(-50%);
+      text-align: center; padding: 8px 0 4px; }
+    .neon-ad-unit { max-width: 100%; display: flex; flex-direction: column; align-items: center; }
+    .neon-ad-label { display: block; color: var(--muted); font-size: 11px;
+      line-height: 1.35; padding-bottom: 6px; }
+    body.neon-game-active .neon-ad-area { display: none !important; }
+    .neon-footer-links { display: flex; justify-content: center; text-align: center;
+      flex-wrap: wrap; min-height: 32px; }
     @media(max-width:590px){.payment-options{grid-template-columns:1fr}.topbar{flex-wrap:wrap}.top-actions{width:100%;justify-content:center}.brand small{display:none}.brand-mark{width:34px;height:34px}.select{max-width:112px}.hud{min-height:auto;padding:9px;display:flex;flex-wrap:wrap;justify-content:space-between}.stats{gap:12px}.stat strong{font-size:1.05rem}.action{min-height:39px;padding:0 9px;font-size:.73rem}.hud-actions{width:100%}.side{grid-template-columns:1fr}.howto-card{display:none}.menu-orb{width:72px;height:72px}.menu-box{min-width:0;max-width:100%}.menu-box h2{font-size:clamp(1.8rem,10vw,2.6rem);white-space:normal}.name-field,.menu-buttons{max-width:100%}.screen{padding:16px}.canvas-wrap{padding:6px}.canvas-wrap.menu-mode{min-height:460px}}
   </style>
 
 <meta property="og:image:width" content="1200">
 
-<meta property="og:image:height" content="630"><link rel="stylesheet" href="./neon-standard.css"><script src="./ag-language-menu.js" defer></script><script src="./neon-standard.js" defer></script><script src="./pwa-install.js" defer></script>
+<meta property="og:image:height" content="630"><link rel="stylesheet" href="https://appsandgames.org/privacy-choice.css">
+<script src="https://appsandgames.org/privacy-choice.js" defer></script>
+<link rel="stylesheet" href="./neon-standard.css"><script src="./ag-language-menu.js" defer></script><script src="./neon-standard.js" defer></script><script src="./pwa-install.js" defer></script>
 </head>
 <body>
 <div class="app">
@@ -103,6 +118,16 @@
       <section class="side-card howto-card"><h3 data-i="quickControls">Quick controls</h3><div class="howto" data-i="controlsText">Hold the arrow keys or WASD to move; release to stop. Eat every dot, avoid ghosts, and use power pellets against them.</div><div class="keys"><span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span><span class="key">↑</span><span class="key">←</span><span class="key">↓</span><span class="key">→</span></div></section>
     </aside>
   </main>
+  <!-- Show one responsive ad below game/side cards, never during active play. -->
+  <section class="neon-ad-area" id="neon-ad-area" aria-label="Advertisement" hidden>
+    <div class="neon-ad-unit" data-size="728x90" hidden>
+      <script src="./neon-adsterra-loader.js" data-unit="desktop"></script>
+    </div>
+    <div class="neon-ad-unit" data-size="320x50" hidden>
+      <script src="./neon-adsterra-loader.js" data-unit="mobile"></script>
+    </div>
+  </section>
+  <footer class="footer-links neon-footer-links" aria-label="Privacy choices"></footer>
 </div>
 <div class="modal hidden" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
   <div class="modal-card">
@@ -202,10 +227,10 @@
   function movePos(obj,dir){const d=dirs[dir];let x=obj.x+d.x,y=obj.y+d.y;if(y===10&&x<0)x=COLS-1;if(y===10&&x>=COLS)x=0;return{x,y}}
   function resetActors(){player={x:10,y:14,dir:null,next:null,moving:false};activeControl=null;deathUntil=0;clearTimeout(swipeTimer);makeGhosts();pAcc=gAcc=0}
   function startNew(){score=0;lives=3;level=1;particles=[];popups=[];initDots();resetActors();begin()}
-  function begin(){state='playing';syncDpad();paused=false;powerUntil=0;$('#pauseBtn').textContent=tr('pause');$('#menuScreen').classList.add('hidden');$('#messageScreen').classList.add('hidden');updateHud();unlockAudio();startMusic();if(settings.fullscreen&&!document.fullscreenElement)requestFullscreen();last=performance.now()}
+  function begin(){document.body.classList.add('neon-game-active');state='playing';syncDpad();paused=false;powerUntil=0;$('#pauseBtn').textContent=tr('pause');$('#menuScreen').classList.add('hidden');$('#messageScreen').classList.add('hidden');updateHud();unlockAudio();startMusic();if(settings.fullscreen&&!document.fullscreenElement)requestFullscreen();last=performance.now()}
   function saveGame(){if(state!=='playing')return;const ok=save('neonPacSave',{score,lives,level,dots:[...dots],player,ghosts:ghosts.map(({x,y,dir,delay})=>({x,y,dir,delay})),name:$('#playerName').value.trim()||tr('player'),savedAt:Date.now()});if(!ok){toast(tr('saveFailed'));return}toast(tr('saved'));setTimeout(showMenu,250)}
   function continueGame(){const s=readSavedGame();if(!s){toast(tr('noSave'));return}score=s.score;lives=s.lives;level=s.level;dots=new Set(s.dots);player={x:s.player.x,y:s.player.y,dir:null,next:null,moving:false};activeControl=null;makeGhosts();s.ghosts.forEach((g,i)=>{if(ghosts[i]){ghosts[i].x=g.x;ghosts[i].y=g.y;ghosts[i].dir=g.dir;ghosts[i].delay=g.delay}});$('#playerName').value=s.name||settings.name||'Player';begin()}
-  function showMenu(){state='menu';syncDpad();paused=false;stopMusic();musicStep=0;$('#pauseBtn').textContent=tr('pause');$('#messageScreen').classList.add('hidden');$('#menuScreen').classList.remove('hidden');refreshContinue();updateHud();draw()}
+  function showMenu(){document.body.classList.remove('neon-game-active');state='menu';syncDpad();paused=false;stopMusic();musicStep=0;$('#pauseBtn').textContent=tr('pause');$('#messageScreen').classList.add('hidden');$('#menuScreen').classList.remove('hidden');refreshContinue();updateHud();draw()}
   function refreshContinue(){const s=readSavedGame();$('#continueBtn').disabled=!s;$('#resumeNote').textContent=s?fmt(tr('savedReady'),{level:s.level,score:s.score.toLocaleString()}):''}
   function stepPlayer(){if(paused||state!=='playing'||!player.moving)return;if(player.next){const turn=movePos(player,player.next);if(walkable(turn.x,turn.y)){player.dir=player.next;player.next=null}}if(!player.dir)return;const n=movePos(player,player.dir);if(walkable(n.x,n.y)){player.x=n.x;player.y=n.y;beep(270,.025,'square',.025)}else{player.dir=null}const key=player.x+','+player.y;if(dots.has(key)){const cell=MAP[player.y][player.x];dots.delete(key);score+=cell==='o'?50:10;if(cell==='o'){powerUntil=performance.now()+6500;burst(player.x,player.y,'#54e8ff',28,3.5);popup(player.x,player.y,'+50','#ffe457');triggerFlash('84,232,255',180);beep(620,.13,'sawtooth',.08)}updateHud();if(!dots.size)clearLevel()}checkCollision()}
   function stepGhosts(){if(paused||state!=='playing')return;ghosts.forEach((g,i)=>{if(g.delay>0){g.delay--;return}const choices=Object.keys(dirs).filter(d=>{const n=movePos(g,d);return walkable(n.x,n.y)});let usable=choices.filter(d=>d!==opposite[g.dir]);if(!usable.length)usable=choices;const frightened=performance.now()<powerUntil;usable.sort((a,b)=>{const A=movePos(g,a),B=movePos(g,b),da=Math.hypot(A.x-player.x,A.y-player.y),db=Math.hypot(B.x-player.x,B.y-player.y);return frightened?db-da:da-db});g.dir=Math.random()<(.68+Math.min(level*.025,.18))?usable[0]:usable[Math.floor(Math.random()*usable.length)];const n=movePos(g,g.dir);g.x=n.x;g.y=n.y});checkCollision()}
